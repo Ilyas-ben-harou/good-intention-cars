@@ -6,9 +6,9 @@ import { Link } from "react-router-dom"
 
 export default function CarteVoiture({ car }) {
   const [imageError, setImageError] = useState(false)
-
+  
   // Analyser les photos si c'est une chaîne
-  const photos = typeof car.photos === "string" ? JSON.parse(car.photos) : car.photos
+  const photos = typeof car?.photos === "string" ? JSON.parse(car.photos) : car.photos
 
   // Gérer l'erreur de chargement de l'image
   const handleImageError = () => {

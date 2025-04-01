@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import { FaBell, FaUser, FaSignOutAlt, FaAngleDown } from 'react-icons/fa';
+import React, { useState } from 'react'
+import { FaUser, FaSignOutAlt, FaAngleDown } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import { useAdminAuth } from '../../../context/AdminAuthContext';
 
@@ -28,7 +28,7 @@ const Header = ({ name }) => {
                         aria-expanded={dropdownOpen}
                     >
                         <FaUser className="text-black" />
-                        <span>{name}</span>
+                        <span>{name?name:'admin'}</span>
                         <FaAngleDown
                             onClick={() => setDropdownOpen(!dropdownOpen)}
                             className={`hover:cursor-pointer transition-transform size-5 ${dropdownOpen ? "rotate-180" : "rotate-0"}`}/>

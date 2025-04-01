@@ -1,0 +1,7 @@
+organization=groupilyas1
+projectKey=groupilyas1_good-intention-cars
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.61337
+dashboardUrl=https://sonarcloud.io/dashboard?id=groupilyas1_good-intention-cars
+ceTaskId=AZXy0pOdpw-kB3jmkJST
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AZXy0pOdpw-kB3jmkJST

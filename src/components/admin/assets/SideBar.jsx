@@ -1,4 +1,3 @@
-import { ArrowDown } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { FaHome, FaUsers, FaCar, FaCalendarAlt, FaShieldAlt, FaClipboardCheck, FaAngleDown } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";

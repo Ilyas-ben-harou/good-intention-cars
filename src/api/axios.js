@@ -40,12 +40,3 @@ export const clientAxios = axios.create({
         "Content-Type": "application/json",
     },
 });
-
-// // Ajouter le token d'authentification pour les clients
-// clientAxios.interceptors.request.use(config => {
-//     const token = localStorage.getItem("client_token");
-//     if (token) {
-//         config.headers.Authorization = `Bearer ${token}`;
-//     }
-//     return config;
-// }, error => Promise.reject(error));

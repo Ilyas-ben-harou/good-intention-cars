@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 import { useAdminAuth } from '../../context/AdminAuthContext';
-// import './AdminLayout.css';
 import Header from './assets/Header';
 import SideBar from './assets/SideBar';
 import { adminAxios } from '../../api/axios';

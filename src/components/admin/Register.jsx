@@ -1,4 +1,3 @@
-// src/components/admin/Register.js
 import React, { useState } from 'react';
 import { useAdminAuth } from '../../context/AdminAuthContext';
 import { useNavigate, Link } from 'react-router-dom';

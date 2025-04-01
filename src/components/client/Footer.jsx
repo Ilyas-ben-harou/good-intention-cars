@@ -49,8 +49,8 @@ const Footer = () => {
           <div className="flex flex-col">
             <h3 className="font-bold text-lg mb-4">Pages</h3>
             <ul className="space-y-2">
-              {["Accueil", "À propos de nous", "Contact", "Parc Auto"].map((page, index) => (
-                <li key={index}>
+              {["Accueil", "À propos de nous", "Contact", "Parc Auto"].map((page) => (
+                <li key={page}>
                   <Link to={`/${page.toLowerCase().replace(/\s+/g, "-")}`} className="hover:underline">
                     {page}
                   </Link>
@@ -63,9 +63,9 @@ const Footer = () => {
           <div className="flex flex-col">
             <h3 className="font-bold text-lg mb-4">Suivez-nous</h3>
             <div className="flex flex-col space-y-3">
-              {socialLinks.map(({ icon: Icon, name, url }, index) => (
+              {socialLinks.map(({ icon: Icon, name, url }) => (
                 <a
-                  key={index}
+                  key={name}
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"

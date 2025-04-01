@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Chart as ChartJS, ArcElement, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
 import { Pie, Bar } from 'react-chartjs-2';
 import { FaCar, FaUserAlt, FaCalendarCheck, FaMoneyBillWave } from 'react-icons/fa';
-// import '../../styles/Dashboard.css'
+
 import { adminAxios } from '../../api/axios';
 
 // Register ChartJS components
@@ -228,7 +228,7 @@ const DashboardAdmin = () => {
                             </tr>
                         </thead>
                         <tbody className="bg-white divide-y divide-gray-200">
-                            {recentRes.length > 0 ? (
+                            {recentRes?.length > 0 ? (
                                 recentRes.map((res) => (
                                     <tr key={res.id} className="hover:bg-gray-50">
                                         <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-900">{res.id}</td>
@@ -237,18 +237,19 @@ const DashboardAdmin = () => {
                                         <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-900">{res.date_debut}</td>
                                         <td className="px-4 py-4 whitespace-nowrap text-sm text-gray-900">{res.date_fin}</td>
                                         <td className="px-4 py-4 whitespace-nowrap">
-                                            <span className={`px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${res.status === 'active' ? 'bg-green-100 text-green-800' :
-                                                    res.status === 'pending' ? 'bg-yellow-100 text-yellow-800' :
-                                                        res.status === 'completed' ? 'bg-blue-100 text-blue-800' :
-                                                            'bg-gray-100 text-gray-800'
-                                                }`}>
+                                            <span
+                                                className={`px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full 
+                                                    ${res.status === 'active' ? 'bg-green-100 text-green-800' : ''} 
+                                                    ${res.status === 'pending' ? 'bg-yellow-100 text-yellow-800' : ''} 
+                                                    ${res.status === 'completed' ? 'bg-blue-100 text-blue-800' : ''}`
+                                                }>
                                                 {res.status}
                                             </span>
                                         </td>
                                         <td className="px-4 py-4 whitespace-nowrap">
                                             <span className={`px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${res.payment_status === 'paid' ? 'bg-green-100 text-green-800' :
-                                                    res.payment_status === 'pending' ? 'bg-yellow-100 text-yellow-800' :
-                                                        'bg-red-100 text-red-800'
+                                                res.payment_status === 'pending' ? 'bg-yellow-100 text-yellow-800' :
+                                                    'bg-red-100 text-red-800'
                                                 }`}>
                                                 {res.payment_status}
                                             </span>

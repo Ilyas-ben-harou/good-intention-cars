@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { RouterProvider } from "react-router-dom";
-import { AdminAuthProvider, useAdminAuth } from "./context/AdminAuthContext";
+import { AdminAuthProvider } from "./context/AdminAuthContext";
 import { ClientAuthProvider } from "./context/ClientAuthContext";
 import router from "./router";
 

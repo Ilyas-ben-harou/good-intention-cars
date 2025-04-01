@@ -2,7 +2,6 @@ import { Link } from "react-router-dom"
 import { Fuel, DoorClosed, Users } from "lucide-react"
 
 import { Card, CardContent } from "../../ui/card"
-import { Button } from "../../ui/button"
 
 export default function CarCard({ car }) {
     // Parse photos if it's a JSON string

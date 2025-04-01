@@ -55,7 +55,7 @@ export default function SectionHero() {
         <div className="h-56 w-full sm:h-72 md:h-96 lg:w-full lg:h-full relative overflow-hidden">
           {images.map((image, index) => (
             <img
-              key={index}
+              key={image.src}
               className={`absolute inset-0 w-full  object-cover transition-opacity duration-1000 ${index === currentImage ? "opacity-100" : "opacity-0"
                 }`}
               src={image.src}
@@ -65,9 +65,9 @@ export default function SectionHero() {
           ))}
           {/* Indicateurs d'image */}
           <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-2 z-10">
-            {images.map((_, index) => (
+            {images.map((image, index) => (
               <div
-                key={index}
+                key={image.alt}
                 className={`h-2 w-2 rounded-full ${index === currentImage ? "bg-white" : "bg-white/50"
                   }`}
                 aria-label={`Image ${index + 1}`}

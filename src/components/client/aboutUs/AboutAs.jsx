@@ -110,8 +110,8 @@ export default function AboutUs() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
+            {services.map((service) => (
+              <div key={service.title} className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition-shadow">
                 <div className="bg-green-50 w-16 h-16 rounded-full flex items-center justify-center mb-4">
                   {service.icon}
                 </div>
@@ -133,7 +133,7 @@ export default function AboutUs() {
 
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="border border-gray-200 rounded-lg overflow-hidden">
+              <div key={faq.question} className="border border-gray-200 rounded-lg overflow-hidden">
                 <button
                   className="flex justify-between items-center w-full px-6 py-4 text-left font-medium text-gray-900 focus:outline-none"
                   onClick={() => toggleFaq(index)}
